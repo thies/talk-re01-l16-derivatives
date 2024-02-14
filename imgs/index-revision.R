@@ -22,8 +22,9 @@ exp( lm(log(ret)~d2+d3-1, data=dat)$coefficients)
 index <- cbind(c(100,110,165), c(100,100,137))
 
 svg('indices.svg', width=7, height=3)
-par(mar=c(2,2,1,0))
+par(mar=c(4,4,1,0))
 plot(range(2021:2023),range(index), type='n', xlab='Year', ylab='Index')
 lines(2021:2023, index[,1], lwd=3, col='lightblue')
 lines(2021:2023, index[,2], lwd=3, col='red')
 dev.off()
+
